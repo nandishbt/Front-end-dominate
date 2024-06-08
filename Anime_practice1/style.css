@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  
+}
+
+button{
+    padding: 20px 40px;
+    border: 2px solid cyan;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    background-color: transparent;
+    transition: all linear 0.5s;  
+    position: relative;
+    overflow: hidden;
+   
+}
+
+button::after{
+    content: "";
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: cyan;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    transition: all linear 0.3s;
+  
+ 
+    z-index: -1;
+   
+}
+
+button:hover::after{
+    transform: translate(-50%,-50%) scale(5);
+}
+
+button:hover{
+    color: black;
+    cursor: pointer;
+}
